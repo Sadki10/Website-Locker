@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">hola</p>
+    <p id="p2">hola2</p>
+    <p id="p3">hola3</p>
+    <input type="submit" value="hola" id="hola">
+    <script type="text/javascript">
+        function chDisplay(display) {
+            if (chDisplay.submitter.id === 'hola') {
+                document.getElementById('p1').style.display = display;
+                document.getElementById('p2').style.display = display;             
+                console.log('holaa');
+            }
+        }
+        document.addEventListener('submit', chDisplay => {chDisplay('none')})
+        var blacklist = ["google.com", "youtube.com"];
+        blacklist.push("text.html");
+        if (window.location.href.indexOf(blacklist)) {
+            console.log("blacklisted");
+        }
+    </script>
+</body>
+</html>

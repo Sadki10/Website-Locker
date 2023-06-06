@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.blocker {
+    max-width:100%;
+    max-height: 100%;
+    overflow: hidden;
+    background-color: #6f00bb4f;
+    padding: 0;
+    border: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.iframe {
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}

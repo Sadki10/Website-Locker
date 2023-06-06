@@ -1,0 +1,22 @@
+ {
+    "manifest_version": 3,
+    "name": "Sadki Website Locker",
+    "version": "0.0.1",
+
+    "permissions": ["tabs", "storage"],
+    "description": "Extensió per a bloquejar pàgines amb una contraenya",
+	"action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["index.js"],
+            "css": ["index.css"],
+            "matches": ["*://*/*"],
+            "run_at": "document_start"
+        }],
+    "web_accessible_resources": [{
+        "resources": ["index.html"],
+        "matches": ["*://*/*"]
+    }]
+ }
